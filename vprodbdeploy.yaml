@@ -20,8 +20,8 @@ spec:
           args:
             - "--ignore-db-dir=lost+found"
           volumeMounts:
-            - mountPath: /var/lib/mysql
-              name: vpro-db-data
+            - name: vpro-db-data
+              mountPath: /var/lib/mysql
           ports:
             - name: vprodb-port
               containerPort: 3306
