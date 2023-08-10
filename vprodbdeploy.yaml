@@ -18,7 +18,8 @@ spec:
         - name: vprodb
           image: devopsyuvi/vprofiledb:latest
           args:
-            - "--ignore-db-dir=lost+found"
+            - "--ignore-db-dir"
+            - "lost+found"
           volumeMounts:
             - name: vpro-db-data
               mountPath: /var/lib/mysql
